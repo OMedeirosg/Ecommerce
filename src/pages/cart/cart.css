@@ -1,0 +1,49 @@
+/* da destaque para cada item
+fazer o grid de cada item
+mostrar a quantidade de item 
+ estilizar a borda  */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.cartItem {
+  background-color: rgb(252, 248, 243);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin: 30px;
+  border: 20px black;
+  display: flex;
+  gap: 5rem;
+  padding: 5px 20px;
+  width: 500px;
+  align-items: center;
+}
+
+b {
+  font-size: 30px;
+}
+p {
+  font-size: 20px;
+}
+
+.cartItem:hover {
+  transform: scale(1.03);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.checkout button {
+  margin: 10px;
+  width: 150px;
+  padding: 10px;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.3s;
+  background-color: white;
+}
+
+.checkout button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px black;
+}
