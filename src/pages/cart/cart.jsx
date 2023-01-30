@@ -1,3 +1,5 @@
+//Corrigir responsividade para mobile.
+
 import React, { useContext } from "react";
 import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/shop-context";
@@ -16,19 +18,19 @@ export const Cart = () => {
         <h1>Your Cart Items</h1>
       </div>
       <div className="cartItems">
-        <div className="cartItemsBorder">
-          {PRODUCTS.map((product) => {
-            if (cartItems[product.id] !== 0) {
-              return <CartItem data={product} />;
-            }
-          })}
-        </div>
+        {PRODUCTS.map((product) => {
+          if (cartItems[product.id] !== 0) {
+            return <CartItem data={product} />;
+          }
+        })}
       </div>
       {totalAmount > 0 ? (
         <div className="checkout">
           <p>Subtotal:${totalAmount}</p>
-          <button onClick={() => navigate("/")}>Continue Shopping </button>
-          <button>Chekout</button>
+          <div className="checkoutActions">
+            <button onClick={() => navigate("/")}>Continue Shopping </button>
+            <button>Chekout</button>
+          </div>
         </div>
       ) : (
         <h1>Your Cart is Empty</h1>
