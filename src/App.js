@@ -1,3 +1,8 @@
+//fazer um useEffet
+//dentro do useeffcet usar o API
+// transforma de dados para Json
+// usar um setState depois de tudo funcionar
+
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";

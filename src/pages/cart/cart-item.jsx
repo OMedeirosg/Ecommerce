@@ -3,15 +3,15 @@ import { ShopContext } from "../../context/shop-context";
 import "./cart.css";
 
 export const CartItem = (props) => {
-  const { id, productName, price, productImage } = props.data;
+  const { id, title, price, images } = props.data;
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
 
   return (
     <div className="cartItem">
       <div className="nameProduct">
-        <img src={productImage} alt="A Product Image" />
-        <h3>{productName}</h3>
+        <img src={images[0]} alt="A Product Image" />
+        <h3>{title}</h3>
       </div>
       <div className="descriptionCart">
         <p>Price:${price}</p>
